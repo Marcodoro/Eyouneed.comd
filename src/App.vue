@@ -5,10 +5,15 @@ import TheWelcome from './components/TheWelcome.vue'
 
 <template>
   <div class="page">
-
+       <p>Working in progress... This website uses &Tab;.<a href="https://vuejs.org"> Vue.js</a></p>
   </div>
 </template>
 
 <style scoped>
-
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
 </style>
