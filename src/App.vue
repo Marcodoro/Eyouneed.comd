@@ -1,19 +1,122 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+import Hamburger from './components/icons/Hamburger.vue';
+
+export default {
+  data() {
+    return {
+       openvalue: Number,
+    }
+  },
+  components: {
+    Hamburger,
+  },
+  methods: {
+    open() {
+        
+    }
+  },
+}
+
 </script>
 
 <template>
   <div class="page">
-       <p>Working in progress... This website uses &Tab;.<a href="https://vuejs.org"> Vue.js</a></p>
+    <div class="menu">
+       <div class="hamburger" @click="console.log(`clicked`)">
+           <Hamburger />
+       </div>
+       <div class="title">
+   
+       </div>
+       <div class="login">
+   
+       </div>
+       <div class="home">
+            
+       </div>
+       <div class="search">
+   
+       </div>
+    </div>
+    <div class="open" :style="{width: openvalue}">
+
+    </div>
   </div>
 </template>
 
 <style scoped>
-p {
+.menu {
+  width: 100%;
+  height: 50px;
+  transition: hover 1.2s ease-in-out;
+  background-color: rgb(31, 31, 31);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-self: center;
+  gap: 15px;
+}
+.open {
+  height: 1000px;
+  background-color: black;
+  position: fixed;
+}
+.menu:hover {
+  background-color: rgb(22, 22, 22);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 48px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.hamburger {
+  border: 2px red solid;
+  width: 10%;
+  height: 48px;
+  display: flex;
+  justify-content: left;
+  margin: 0px 0px;
+}
+.login {
+  border: 2px red solid;
+  width: 20%;
+  height: 47px;
+}
+.search {
+  border: 2px red solid;
+  width: 10%;
+  height: 48px;
+}
+.home {
+  border: 2px red solid;
+  width: 20%;
+  height: 48px;
+}
+.title {
+  border: 2px red solid;
+  width: 20%;
+  height: 48px;
+}
+
+@media only screen and (max-width: 412px) {
+  .menu {
+      width: 100%;
+      height: 32px;
+    }
+  .hamburger {
+      width: 100%;
+      height: 32px;
+    }
+  .login {
+      width: 100%;
+      height: 32px;
+    }
+  .search {
+      width: 100%;
+      height: 32px;
+    }
+  .home {
+      width: 100%;
+      height: 32px;
+    }
+  .title {
+      width: 100%;
+      height: 32px;
+    }
 }
 </style>
