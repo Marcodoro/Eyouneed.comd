@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     open() {
-        
+        this.openvalue = 50;
     }
   },
 }
@@ -26,16 +26,22 @@ export default {
            <Hamburger />
        </div>
        <div class="title">
-   
+           <div class="title-text">
+             Eyouneed
+           </div>
        </div>
        <div class="login">
-   
+          <div class="login-text">
+            Login
+          </div>
        </div>
        <div class="home">
-            
+          <div class="home-text">
+            Home
+          </div>
        </div>
        <div class="search">
-   
+
        </div>
     </div>
     <div class="open" :style="{width: openvalue}">
@@ -76,6 +82,9 @@ export default {
   border: 2px red solid;
   width: 20%;
   height: 47px;
+  font-weight: bolder;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .search {
   border: 2px red solid;
@@ -86,11 +95,26 @@ export default {
   border: 2px red solid;
   width: 20%;
   height: 48px;
+  font-weight: bolder;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .title {
   border: 2px red solid;
   width: 20%;
   height: 48px;
+  font-weight: bolder;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.title-text {
+  margin: 13px 0px;
+}
+.home-text {
+  margin: 13px 0px;
+}
+.login-text {
+  margin: 13px 0px;
 }
 
 @media only screen and (max-width: 412px) {

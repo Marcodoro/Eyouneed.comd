@@ -46,8 +46,23 @@ export default {
 .wrappeer {
     display: flex;
     flex-direction: column;
-    gap: 7px;
-    margin: 3px -40px;
+    gap: 4px;
+    margin: 3px 7px;
     justify-content: left;
+}
+@media only screen and (min-width: 1024px) {
+    .wrappeer {
+        margin: 6px -65%;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .wrappeer {
+       margin: 6px -70%;
+    }
+}
+@media only screen and (min-width: 720px) {
+    .wrappeer {
+        margin: 6px -30%;
+    }
 }
 </style>
