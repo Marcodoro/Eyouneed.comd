@@ -142,5 +142,14 @@ export default {
       width: 100%;
       height: 32px;
     }
+.title-text {
+  margin: 6px 00px;
+}
+.home-text {
+  margin: 6px 00px;
+}
+.login-text {
+  margin: 6px 00px;
+}
 }
 </style>
