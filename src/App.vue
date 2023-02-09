@@ -30,6 +30,10 @@ export default {
              Eyouneed
            </div>
        </div>
+       <div class="search">
+          <div class="circle"></div>
+          <div class="linee"></div>
+       </div>
        <div class="login">
           <div class="login-text">
             Login
@@ -40,9 +44,6 @@ export default {
             Home
           </div>
        </div>
-       <div class="search">
-
-       </div>
     </div>
     <div class="open" :style="{width: openvalue}">
 
@@ -52,6 +53,7 @@ export default {
 
 <style scoped>
 .menu {
+  position: fixed;
   width: 100%;
   height: 50px;
   transition: hover 1.2s ease-in-out;
@@ -71,7 +73,7 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 48px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .hamburger {
-  border: 2px red solid;
+  border: 2px transparent solid;
   width: 10%;
   height: 48px;
   display: flex;
@@ -79,7 +81,7 @@ export default {
   margin: 0px 0px;
 }
 .login {
-  border: 2px red solid;
+  border: 2px transparent solid;
   width: 20%;
   height: 47px;
   font-weight: bolder;
@@ -87,12 +89,15 @@ export default {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .search {
-  border: 2px red solid;
+  border: 2px transparent solid;
   width: 10%;
   height: 48px;
+  display: flex;
+  flex-direction: columns;
+  justify-content: center;
 }
 .home {
-  border: 2px red solid;
+  border: 2px transparent solid;
   width: 20%;
   height: 48px;
   font-weight: bolder;
@@ -100,7 +105,7 @@ export default {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .title {
-  border: 2px red solid;
+  border: 2px transparent solid;
   width: 20%;
   height: 48px;
   font-weight: bolder;
@@ -116,40 +121,57 @@ export default {
 .login-text {
   margin: 13px 0px;
 }
-
+.circle {
+  width: 17px;
+  height: 17px;
+  border: solid 2.5px white;
+  border-radius: 100%;
+  margin: 4px 0px;
+}
+.linee {
+  width: 20px;
+  height: 4px;
+  border-radius: 55px;
+  background-color: white;
+  margin: 24px 0%;
+  transform: rotate(30deg);
+}
 @media only screen and (max-width: 412px) {
   .menu {
       width: 100%;
-      height: 32px;
+      height: 42px;
     }
   .hamburger {
       width: 100%;
-      height: 32px;
+      height: 42px;
     }
   .login {
       width: 100%;
-      height: 32px;
+      height: 42px;
     }
   .search {
       width: 100%;
-      height: 32px;
+      height: 42px;
     }
   .home {
       width: 100%;
-      height: 32px;
+      height: 42px;
     }
   .title {
       width: 100%;
-      height: 32px;
+      height: 42px;
     }
 .title-text {
-  margin: 6px 00px;
+  margin: 8px 00px;
+  font-size: 19px;
 }
 .home-text {
-  margin: 6px 00px;
+  margin: 8px 00px;
+  font-size: 19px;
 }
 .login-text {
-  margin: 6px 00px;
+  margin: 8px 00px;
+  font-size: 19px;
 }
 }
 </style>
