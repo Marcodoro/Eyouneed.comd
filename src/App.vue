@@ -175,6 +175,7 @@ export default {
 }
 .menu {
   bottom: 1%;
+  width: 97%;
 }
 }
 </style>
