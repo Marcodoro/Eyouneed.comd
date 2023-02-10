@@ -173,5 +173,8 @@ export default {
   margin: 8px 00px;
   font-size: 19px;
 }
+.menu {
+  margin: 100% 0%;
+}
 }
 </style>
