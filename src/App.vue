@@ -54,7 +54,7 @@ export default {
 <style scoped>
 .menu {
   position: fixed;
-  width: 100%;
+  width: 97%;
   height: 50px;
   transition: hover 1.2s ease-in-out;
   background-color: rgb(31, 31, 31);
@@ -174,7 +174,7 @@ export default {
   font-size: 19px;
 }
 .menu {
-  margin: 100% 0%;
+  bottom: 1%;
 }
 }
 </style>
