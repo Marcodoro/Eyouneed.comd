@@ -138,8 +138,9 @@ export default {
   width: 70%;
   display: flex;
   justify-content: center;
+  justify-self: center;
   align-content: center;
-  left: 15%;
+  left: 25%;
   position: absolute;
   align-items: center;
   flex-direction: column;
@@ -159,8 +160,9 @@ export default {
 }
 .menu {
   position: fixed;
-  width: 97%;
+  width: 100%;
   height: 8%;
+  margin: 0px -10px;
   max-height: 70px;
   transition: hover 1.2s ease-in-out;
   background-color: rgba(31, 31, 31, 0.692);
@@ -373,6 +375,9 @@ body {
       width: 100%;
       height: 42px;
     }
+    .getstarted {
+      left: 15%;
+    }
 .title-text {
   margin: 8px 00px;
   font-size: 19px;
@@ -389,5 +394,19 @@ body {
   width: 96%;
 }
 }
-
+@media only screen and (min-width: 1080px) {
+  .getstarted {
+    left: 15%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .getstarted {
+    left: 12.5%;
+  }
+}
+@media only screen and (min-width: 1880px) {
+  .getstarted {
+    left: 30%;
+  }
+}
 </style>
