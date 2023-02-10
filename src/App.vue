@@ -1,5 +1,4 @@
 <script>
-import Hamburger from './components/icons/Hamburger.vue';
 
 export default {
   data() {
@@ -8,7 +7,7 @@ export default {
     }
   },
   components: {
-    Hamburger,
+
   },
   methods: {
     open() {
@@ -23,7 +22,12 @@ export default {
   <div class="page">
     <div class="menu">
        <div class="hamburger" @click="console.log(`clicked`)">
-           <Hamburger />
+        <div class="wrappeer">
+            <div class="line"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+        </div>
        </div>
        <div class="title">
            <div class="title-text">
@@ -78,6 +82,55 @@ export default {
 </template>
 
 <style scoped>
+.line {
+    width: 7.9vh;
+    height: 1vh;
+    background-color: #ffffff;
+    border-radius: 55px;
+}
+.line2 {
+    content: '';
+    width: 6.4vh;
+    height: 1vh;
+    background-color: #ffffff;
+    border-radius: 55px;
+}
+.line3{
+    content: '';
+    width: 5.0vh;
+    height: 1vh;
+    background-color: #ffffff;
+    border-radius: 55px;
+}
+.line4{
+    content: '';
+    width:  3.0vh;
+    height: 1vh;
+    background-color: #ffffff;
+    border-radius: 55px;
+}
+.wrappeer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 3px 7px;
+    justify-content: left;
+}
+@media only screen and (min-width: 1024px) {
+    .wrappeer {
+        margin: 6px -65%;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .wrappeer {
+       margin: 6px -70%;
+    }
+}
+@media only screen and (min-width: 720px) {
+    .wrappeer {
+        margin: 6px -30%;
+    }
+}
 .getstarted {
   height: 30%;
   max-height: 300px;
@@ -123,11 +176,11 @@ export default {
   text-decoration: underline;;
 }
 .text {
-  margin: 5px 0px;
+  margin: .5vh 0px;
 }
 .under-menu {
   width: 97%;
-  height: 25px;
+  height: 2.5vh;
   margin: -5px 0px;
   display: flex;
   gap: 4%;
@@ -155,6 +208,8 @@ export default {
   justify-content: center;
   height: 9vh;
   width: 30vh;
+  max-height: 200px;
+  max-width: 400px;
   text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
@@ -290,6 +345,7 @@ export default {
 body {
   overflow-x: hidden;
   overflow-y: hidden;
+  max-height: 1300px;
 }
 
 @media only screen and (max-width: 412px) {
@@ -333,4 +389,5 @@ body {
   width: 96%;
 }
 }
+
 </style>
