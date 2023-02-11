@@ -50,7 +50,7 @@ export default {
          </div>
          <div class="home">
             <div class="home-text">
-              Home
+              Other
             </div>
          </div>
       </div>
