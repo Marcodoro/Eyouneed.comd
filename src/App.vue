@@ -197,15 +197,21 @@ export default {
   background-image: linear-gradient(to right, #0b17b9 0%, #731716 100%);
   color: white;
 }
-.menu:hover {
-  text-decoration: underline;;
+.login:hover {
+  text-decoration: underline;
+}
+.home:hover {
+  text-decoration: underline;
+}
+.title:hover {
+  text-decoration: underline;
 }
 .text {
   margin: .5vh 0px;
 }
 .under-menu {
   width: 97%;
-  height: 3.5vh;
+  height: 2.6vh;
   margin: -5px 0px;
   display: flex;
   gap: 4%;
@@ -219,6 +225,7 @@ export default {
   background: linear-gradient(to right, #0b17b9 0%, #731716 100%);
   -webkit-background-clip: text;
   overflow-x: hidden;
+  overflow-y: hidden;
   -webkit-text-fill-color: transparent;
 }
 /* CSS */
@@ -380,6 +387,7 @@ body {
   .menu {
       width: 100%;
       height: 42px;
+      margin: 0px 0px;
     }
   .hamburger {
       width: 100%;
