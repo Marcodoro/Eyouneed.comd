@@ -20,47 +20,63 @@ export default {
 
 <template>
   <div class="page">
-    <div class="menu">
-       <div class="hamburger" @click="console.log(`clicked`)">
-        <div class="wrappeer">
-            <div class="line"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-            <div class="line4"></div>
-        </div>
-       </div>
-       <div class="title">
-           <div class="title-text">
-             Eyouneed
-           </div>
-       </div>
-       <div class="search">
-          <div class="circle"></div>
-          <div class="linee"></div>
-       </div>
-       <div class="login">
-          <div class="login-text">
-            Login
+    <div class="all-menu">
+      <div class="menu">
+         <div class="hamburger" @click="console.log(`clicked`)">
+          <div class="wrappeer">
+              <div class="line"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+              <div class="line4"></div>
           </div>
-       </div>
-       <div class="home">
-          <div class="home-text">
-            Home
-          </div>
-       </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="under-menu">
-      <div class="text">Shop</div>
-      <div class="text">Learn to code</div>
-      <div class="text">Code library</div>
-      <div class="text">Register</div>
-      <div class="text">Top flist</div>
+         </div>
+         <div class="title">
+             <div class="title-text">
+               Eyouneed
+             </div>
+         </div>
+         <div class="search">
+                     
+         </div>
+         <div class="login">
+            <div class="login-text">
+              Login
+            </div>
+         </div>
+         <div class="home">
+            <div class="home-text">
+              Home
+            </div>
+         </div>
+         <div class="home">
+            <div class="home-text">
+              Home
+            </div>
+         </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="under-menu">
+        <div class="text">Shop</div>
+        <div class="text">Learn to code</div>
+        <div class="text">Code library</div>
+        <div class="text">Register</div>
+        <div class="text">Top flist</div>
+        <div class="text">Top flist</div>
+        <div class="text">Top flist</div>
+        <div class="text">Top flist</div>
+        <div class="text">Top flist</div>
+        <div class="text">Top flist</div>
+        <div class="text">Top flist</div>
+        <div class="text">Top flist</div>
+        <div class="text">Top flist</div>
+        <div class="text">Top flist</div>
+        <div class="text">Top flist</div>
+      </div>     
     </div>
     <div class="open" :style="{width: openvalue}">
-
+      
     </div>
     <br>
     <br>
@@ -82,6 +98,11 @@ export default {
 </template>
 
 <style scoped>
+.all-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
 .line {
     width: 7.9vh;
     height: 1vh;
@@ -164,6 +185,8 @@ export default {
   height: 8%;
   margin: 0px -10px;
   max-height: 70px;
+  overflow-x: hidden;
+  overflow-y: hidden;
   transition: hover 1.2s ease-in-out;
   background-color: rgba(31, 31, 31, 0.692);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -182,7 +205,7 @@ export default {
 }
 .under-menu {
   width: 97%;
-  height: 2.5vh;
+  height: 3.5vh;
   margin: -5px 0px;
   display: flex;
   gap: 4%;
@@ -195,6 +218,7 @@ export default {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background: linear-gradient(to right, #0b17b9 0%, #731716 100%);
   -webkit-background-clip: text;
+  overflow-x: hidden;
   -webkit-text-fill-color: transparent;
 }
 /* CSS */
@@ -287,7 +311,7 @@ export default {
 .search {
   border: 2px transparent solid;
   width: 10%;
-  height: 48px;
+  height: 12vh;
   font-size: 3.5vh;
   display: flex;
   flex-direction: columns;
@@ -331,17 +355,19 @@ export default {
 }
 .circle {
   width: 17px;
-  height: 17px;
+  height: 3vh;
   border: solid 2.5px white;
   border-radius: 100%;
-  margin: 4px 0px;
+  margin: -4px 0px;
+  position: fixed;
 }
 .linee {
   width: 20px;
-  height: 4px;
+  height: 0.8vh;
   border-radius: 55px;
+  position: fixed;
   background-color: white;
-  margin: 24px 0%;
+  margin: -2px 0%;
   transform: rotate(30deg);
 }
 body {
@@ -407,6 +433,11 @@ body {
 @media only screen and (min-width: 1880px) {
   .getstarted {
     left: 30%;
+  }
+}
+@media only screen and (min-width: 918px) {
+  .getstarted {
+    left: 15%;
   }
 }
 </style>
