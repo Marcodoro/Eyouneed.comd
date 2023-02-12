@@ -8,12 +8,21 @@
   },
    data() {
      return {
-       open: false,
+       login: false,
       }
   },
   methods: {
     open() {
 
+    },
+    clicked() {
+      if (this.login == false) {
+        this.login = true;
+      } else {
+        this.login = false
+      }
+    },
+    submit() {
     }
   },
 }
@@ -28,7 +37,7 @@
               <span class="line3"></span>
               <span class="line4"></span>
          </div>
-        <div class="login">
+        <div class="login" @click="clicked()">
            Login
         </div>
         <div class="menu">
@@ -42,7 +51,7 @@
     <div class="open" v-if="open == true">
       
     </div>
-    <div class="rest">
+    <div class="rest" v-if="login == false">
        <div class="getstarted">
           <div class="learncode">
              <div class="text-code">Learn Web dev</div>
@@ -51,18 +60,18 @@
           </div>
        </div>
       </div>
-       <div class="line"></div>
+       <div class="line" v-if="login == false"></div>
        <br>
-          <div class="courses">
-            <div class="border">
-              <div class="fix">
-                <div class="courses-text">
+          <div class="courses" v-if="login == false">
+            <div class="border" v-if="login == false">
+              <div class="fix" v-if="login == false">
+                <div class="courses-text" v-if="login == false">
                   Courses that we offer &nbsp; 
                 </div>
                 <a href="" class="see-all">See all </a>
               </div>
               <br>
-              <div class="scroll">
+              <div class="scroll" v-if="login == false">
                 <img src="https://via.placeholder.com/150/0000FF/808080 ?Text=PAKAINFO.com" alt="" height="250px">
                 <img src="https://via.placeholder.com/150/0000FF/808080 ?Text=PAKAINFO.com" alt="" height="250px">
                 <img src="https://via.placeholder.com/150/0000FF/808080 ?Text=PAKAINFO.com" alt="" height="250px">
@@ -71,7 +80,7 @@
               </div>
             </div>
       </div>  
-      <footer>
+      <div class="footer" v-if="login == false">
         <div class="down">
           <div class="icons">
              
@@ -83,23 +92,127 @@
              
            </div>
         </div>
-      </footer>     
+      </div>    
+      <template class="login" v-if="login == true">
+           <div class="title">Login</div>
+           <br>
+           <br>
+           <br>
+           <br>
+           <form netlify>
+              <div class="name">
+                 <input type="text" id="name" name="name" placeholder="Your Name" />
+              </div>
+              <div class="email">
+                 <input type="email" id="email" name="email" placeholder="Your Email Address" />
+              </div>
+              <br>
+              <div class="submit">
+                <input class="button-36" type="submit" />
+              </div>
+           </form>
+           <br>
+           <br>
+           <br><br><br><br><br><br><br><br><br><br>
+           <div class="bottom">
+            
+           </div>
+      </template> 
   </div> 
 </template>
-
  <style>
-footer {
+ .bottom {
+  width: 100%;
+  height: 860px;
+  background-color: black;
+  background-image: linear-gradient(to bottom, rgb(20, 111, 111), rgb(39, 106, 113), black);
+ }
+/* CSS */
+.button-36 {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 5px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 9vw;
+  width: 20vw;
+}
+
+.button-36:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+ ::placeholder {
+  color: #000000;
+ }
+ #name,#email {
+  width: 33vw;
+  height: 3vw;
+  min-height: 15px;
+  min-width: 250px;
+  border: black solid 2px;
+  border-radius: 4px;
+  max-height: 55px;
+  max-width: 490px;
+  background-image: linear-gradient(to right, #0d7478 9.16%, #5643CC);
+ }
+ form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1vw;
+  height: 100%;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+ }
+ .title {
+  font-size: 4vw;
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: #4DCF9B;
+background: linear-gradient(to right, #4DCF9B 22%, #4A92FF 42%, #9B23CF 70%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+ }
+.footer {
   position: fixed;
   margin: 90% 0px;
   width: 100vw;
-  height: 40px;
-  background-color: red;
+  height: 20px;
+  background-color: rgb(179, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .down {
   position: fixed;
-  margin: 0% 0px;
+  margin: 90% 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   width: 100vw;
-  height: 40px;
+  height: 20px;
   background-color: red;
 }
  .scroll {
@@ -231,7 +344,7 @@ background: linear-gradient(90deg, rgb(2, 42, 52) 3%, rgba(18,88,102,1) 73%, rgb
    justify-content: space-between;
    align-items: center;
    overflow: hidden;
-   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+   box-shadow: rgba(71, 123, 134, 0.295) 0px 19px 38px, rgba(27, 223, 174, 0.168) 0px 15px 12px;
    margin: -5px 0px;
    height: 4vh;
    min-height: 30px;
@@ -302,6 +415,9 @@ background: linear-gradient(90deg, rgb(2, 42, 52) 3%, rgba(18,88,102,1) 73%, rgb
    .text-code {
     font-size: 32px;
    }
+   .title {
+    font-size: 38px;
+   }
  }
  @media only screen and (min-width: 1200px) {
    .about {
@@ -330,25 +446,10 @@ background: linear-gradient(90deg, rgb(2, 42, 52) 3%, rgba(18,88,102,1) 73%, rgb
  }
  @media only screen and (min-width: 1880px) {
    menu {
-     min-height: 60px;
+     min-height: 75px;
    }
  }
- :root {
-   height: 1000px;
-   overflow-x: hidden;
-   background: rgb(70,140,166);
-   background: linear-gradient(90deg, rgb(38, 90, 108) 0%, rgb(10, 53, 62) 30%, rgba(2,0,36,1) 96%);
- }
- html {
-    height: 100%;
-   overflow: auto;
-   background: rgb(70,140,166);
-   background: linear-gradient(90deg, rgb(38, 90, 108) 0%, rgb(10, 53, 62) 30%, rgba(2,0,36,1) 96%);
- }
- html {
-   overflow: hidden;
-   height: 100%;
- }
+
  
  
  /* Button styles */
@@ -446,6 +547,10 @@ background: linear-gradient(90deg, rgb(2, 42, 52) 3%, rgba(18,88,102,1) 73%, rgb
     }
     .line {
      bottom: 27%;
+    }
+    .button-36 {
+      max-height: 60px;
+      max-width: 150px;
     }
  }
  @media only screen and (min-width: 1100px) {
