@@ -1,3 +1,24 @@
+ 
+<script>
+ 
+ export default {
+   name: 'App',
+   components: {
+
+  },
+   data() {
+     return {
+       open: Number,
+      }
+  },
+  methods: {
+    open() {
+       this.open = 60
+       console.log(this.openvalue);
+    }
+  },
+}
+  </script>
 <template>
   <div class="all">
     <div class="page">
@@ -31,33 +52,37 @@
           </div>
        </div>
       </div>
-      <div class="line"></div>
-      
+       <div class="line"></div>
+       <br>
+          <div class="courses">
+            <div class="courses-text">
+                Courses that we offer &nbsp; 
+            </div>
+            <a href="" class="see-all"> See all</a>
+            <div class="scroll">
+               <img src="" alt="">
+            </div>
+      </div>       
   </div> 
 </template>
- 
-<script>
- 
- export default {
-   name: 'App',
-   components: {
 
-  },
-   data() {
-     return {
-       open: Number,
-      }
-  },
-  methods: {
-    open() {
-       this.open = 60
-       console.log(this.openvalue);
-    }
-  },
-}
-  </script>
- 
  <style>
+ .see-all {
+  color: rgb(39, 150, 107);
+ }
+.courses {
+  display: flex;
+  border: solid black;
+  justify-content: center;
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.courses-text {
+  background: #8442CF;
+  background: linear-gradient(to right, #8442CF 0%, #3C36FF 32%, #C53ACF 83%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
  .open {
   height: 100%;
   background-color: #111;
@@ -115,7 +140,7 @@ background: linear-gradient(90deg, rgb(2, 42, 52) 3%, rgba(18,88,102,1) 73%, rgb
  .getstarted {
    display: flex;
    justify-content: center;
-   width: 50%;
+   width: 60%;
    height: 45vh;
    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
    background-color: rgba(255, 0, 0, 0);
