@@ -2,8 +2,11 @@
   <div class="all">
     <div class="page">
        <menu>
-         <div class="hamburger">
-              <img src="https://cdn-icons-png.flaticon.com/512/8860/8860952.png" height="28px" />
+         <div class="hamburger" @click="open()">
+              <span class="line1"></span>
+              <span class="line2"></span>
+              <span class="line3"></span>
+              <span class="line4"></span>
          </div>
         <div class="login">
            Login
@@ -16,6 +19,9 @@
         </div>
        </menu>
     </div>
+    <div class="open" :style="{width: open}">
+      
+    </div>
     <div class="rest">
        <div class="getstarted">
           <div class="learncode">
@@ -24,33 +30,86 @@
                <button class="button-85" role="button"><span class="btn-text">Now and Free</span></button>
           </div>
        </div>
-       <div class="line"></div>
-    </div>
-    
+      </div>
+      <div class="line"></div>
+      
   </div> 
- </template>
+</template>
  
- <script>
+<script>
  
  export default {
    name: 'App',
    components: {
-   },
+
+  },
    data() {
      return {
-       see: "scoped",
-     }
-   }
- }
- </script>
+       open: Number,
+      }
+  },
+  methods: {
+    open() {
+       this.open = 60
+       console.log(this.openvalue);
+    }
+  },
+}
+  </script>
  
  <style>
+ .open {
+  height: 100%;
+  background-color: #111;
+ }
+ .hamburger {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.2vw;
+ }
+ .line1 {
+  max-height: 7px;
+  max-width: 74px;
+  width: 7vw;
+  border-radius: 40px;
+  height: 1vw;
+  background-color: #00FFFF;background: rgb(10, 47, 69);
+background: linear-gradient(90deg, rgb(0, 24, 36) 3%, rgba(18,88,102,1) 73%, rgba(70,140,166,1) 100%);
+ }
+ .line2 {
+  max-height: 7px;
+  max-width: 54px;
+  width: 4.5vw;
+  border-radius: 40px;
+  height: 1vw;background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(0, 32, 36) 3%, rgba(18,88,102,1) 73%, rgba(70,140,166,1) 100%);
+  background-color: #08c4c4;
+ }
+ .line3 {
+  max-width: 39px;
+  width: 3vw;
+  max-height: 7px;
+  border-radius: 40px;
+  
+  height: 1vw;
+  background-color: #12a1a1;background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(0, 31, 36) 3%, rgba(18,88,102,1) 73%, rgba(70,140,166,1) 100%);
+ }
+ .line4 {
+  max-width: 24px;
+  max-height: 7px;
+  width: 1.5vw;
+  border-radius: 40px;
+  height: 1vw;background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(2, 42, 52) 3%, rgba(18,88,102,1) 73%, rgba(70,140,166,1) 100%);
+  background-color: #096666;
+ }
  .line {
    width: 100%;
    height: 2vw;
    bottom: 30vh;
-   position: absolute;
-   background-color: transparent;
+   background-color: rgba(12, 104, 144, 0);
    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
  }
  .getstarted {
@@ -81,10 +140,6 @@
    justify-content: center;
    align-items: center;
    margin: 50px 0px;
- }
- .hamburger {
-   justify-content: left;
-   margin: 10px -10%;
  }
  menu {
    display: flex;
@@ -149,10 +204,18 @@
      font-size: 4.9vw;
    }
    .getstarted {
-     max-height: 150px;
+     max-height: 160px;
+     min-width: 250px;
    }
    .line {
      bottom: 55vh;
+   }
+   .hamburger {
+    margin: 0px -30px;
+    gap: 1.5px;
+   }
+   .text-code {
+    font-size: 32px;
    }
  }
  @media only screen and (min-width: 1200px) {
@@ -214,10 +277,10 @@
    position: relative;
    z-index: 0;
    border-radius: 4px;
-   height: 12vw;
+   height: 14vw;
    max-height: 160px;
    max-width: 470px;
-   width: 40vw;
+   width: 55vw;
    user-select: none;
    -webkit-user-select: none;
    touch-action: manipulation;
@@ -288,7 +351,7 @@
  }
  @media only screen and (min-width: 1000px) {
     .btn-text {
-   font-size: max(65px);
+   font-size: max(60px);
     }
     .text-code {
      font-size: max(56px);
@@ -308,5 +371,36 @@
      font-size: max(65px);
     }
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  </style>
  
